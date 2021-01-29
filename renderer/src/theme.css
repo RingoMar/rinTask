@@ -1,0 +1,98 @@
+.bg-secondary-text {
+  background-color: #ffffff;
+}
+.bg-secondary-dark {
+  background-color: #c56200;
+}
+.bg-secondary-light {
+  background-color: #ff9100;
+}
+.bg-secondary-m {
+  background-color: #ffc246;
+}
+
+.secondary-text {
+  color: #ffffff;
+}
+.secondary-dark {
+  color: #c56200;
+}
+.secondary-light {
+  color: #ff9100;
+}
+.secondary-m {
+  color: #ffc246;
+}
+
+.primary-text {
+  color: #a5a5a5;
+}
+.primary-dark {
+  color: #0c0c17;
+}
+.primary-light {
+  color: #5d5c67;
+}
+.primary-m {
+  color: #33333d;
+}
+
+.bg-primary-text {
+  background-color: #a5a5a5;
+}
+.bg-primary-dark {
+  background-color: #0c0c17;
+}
+.bg-primary-light {
+  background-color: #5d5c67;
+}
+.bg-primary-m {
+  background-color: #33333d;
+}
+
+.glanceGraph {
+  overflow: auto;
+  height: 650px;
+}
+
+.inntertable {
+  height: 400px;
+  scrollbar-width: thin;
+}
+.n {
+  color: #fe1930;
+}
+
+.inntertable::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 6px;
+  display: none;
+}
+
+.inntertable::-webkit-scrollbar-track {
+  background: #90a4ae;
+  border-radius: 6px;
+  border: 3px solid #90a4ae;
+}
+
+.inntertable::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #cfd8dc;
+}
+
+td .cut {
+  width: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+td .cut:active,
+td .cut:hover {
+  direction: rtl;
+  padding-left: 10px;
+}
+td .cut:after {
+  content: "\200E‎";
+}

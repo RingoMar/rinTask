@@ -1,0 +1,25 @@
+{
+  "name": "rintask",
+  "version": "1.0.0",
+  "main": "./src/electron.js",
+  "scripts": {
+    "start": "yarn tsc ./src/electron.ts && electron src/electron.js",
+    "start:app": "concurrently \"yarn tsc ./src/electron.ts -w\"  \"cd .. && cd renderer && yarn start\" \"wait-on http://localhost:3000 && electron src/electron.js\""
+  },
+  "author": "ringomar",
+  "dependencies": {
+    "electron": "^5.0.6"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
+    "electron-is-dev": "^1.1.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2",
+    "wait-on": "^3.2.0"
+  },
+  "description": "A simple electron-react-ts app to monitor my RASPI",
+  "license": "MIT",
+  "private": true
+}

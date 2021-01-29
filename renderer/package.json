@@ -1,0 +1,83 @@
+{
+  "name": "RinTask",
+  "description": " A simple electron-react-ts app to monitor my RASPI",
+  "version": "0.1.0",
+  "private": true,
+  "author": "ringomar",
+  "homepage": "./",
+  "build": {
+    "appId": "com.example.myApplication",
+    "productName": "RinTask",
+    "copyright": "Copyright © 2021 RIN",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/app.ico"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "electron-is-dev": "^1.1.0",
+    "fontsource-roboto": "^4.0.0",
+    "jquery": "^3.5.1",
+    "node-sass": "^5.0.0",
+    "popper.js": "^1.16.1",
+    "pretty-bytes": "^5.5.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.4.3",
+    "react-chartjs-2": "^2.11.1",
+    "react-charts": "^2.0.0-beta.7",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "typescript": "3.5.2"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "react-prebuild": "cross-env cp ../main/src/*.js public/",
+    "electron-build": "electron-builder",
+    "release": "yarn run react-prebuild && yarn run react-build && electron-builder --platform=linux --arch=armv7l --publish=always",
+    "build": "yarn run react-prebuild && yarn run react-build && yarn run electron-build",
+    "start": "cross-env BROWSER=none yarn run react-start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4",
+    "electron-reload": "^1.4.0",
+    "wait-on": "^3.2.0",
+    "watch": "^1.0.2"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
